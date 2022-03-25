@@ -1,0 +1,166 @@
+@import "./global.css";
+
+.projets {
+    position: relative;
+    height: 110vh;
+    z-index: 10;
+}
+
+.fill{
+    margin-top: 5px;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: 50%;
+    background-color: var(--beige);
+}
+
+.projets-background {
+    background-color: var(--dark-orange);
+    width: 100%; 
+    height: 100%;
+    margin: auto;
+    transform: skewY(-5deg);
+}
+.inner-top-border {
+    position: absolute;
+    height: 3%;
+    width: 100%;
+    background: linear-gradient(90deg, white 50%, transparent 50%);
+    background-size: 100px;
+    top: 2.5%;
+}
+.inner-bottom-border {
+    position: absolute;
+    height: 3%;
+    width: 100%;
+    background: linear-gradient(90deg, white 50%, transparent 50%);
+    background-size: 100px;
+    bottom: 2.5%;
+}
+
+.caroussel-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.caroussel {
+    position: relative;
+    height: 100%;
+    transition: 0.3s transform;
+}
+
+.projets .caroussel-item {
+    display: flex;
+    float: left;
+    margin-top: 10vh;
+    height: 90vh;
+    transition: 0.3s transform;
+}
+
+
+.projet {
+    background-color: var(--light-orange);
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    transition: 0.3s;
+    word-break: break-word;
+}
+.projet:hover {
+    transform: translateY(-3%);
+    transition: 0.3s;
+}
+
+.projet-content {
+    height: 100%;
+    width: 100%;
+    transform: skewY(5deg);
+    margin-top: 5%
+}
+
+
+.caroussel-next, .caroussel-prev {
+    position: absolute;
+    background-image: url('../ressources/img/arrow-prev.png');
+    background-size: 100% 100%;
+    border-radius: 50%;
+    width: max(40px, 7%);
+    aspect-ratio: 1/1;
+    top: 45%;
+    right: 0px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.caroussel-prev {
+    left: 0px;
+}
+.caroussel-next {
+    background-image: url('../ressources/img/arrow-next.png');
+}
+
+.caroussel-next:hover, .caroussel-prev:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+.focused {
+    transform: scale(1.2);
+}
+.focused:hover {
+    transform: scale(1.2) translateY(-5%);
+    transition: 0.3s;
+}
+
+.projet-titre {
+    font-family: "Prompt Extrabold";
+    background-color: var(--light-orange);
+    color: white;
+    font-size: clamp(2em,3vw,3em);
+    letter-spacing: 1%;
+    line-height: 100%;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.projet-description {
+    font-family: "Prompt Regular";
+    font-size: clamp(0.8em,1.2vw,1em);
+    color: white;
+    margin: 10% 5% 0 5%;
+}
+
+.projet-informations {
+    font-family: "Prompt Light";
+    font-size: clamp(0.8em,1.2vw,1em);
+    font-style: italic;
+    color: white;
+    margin: 0 5%
+}
+
+.projet-icones{
+    text-align: center;
+    width: 90%;
+    padding: 0 5%;
+    height: auto;
+    position: absolute;
+    bottom: 5%;
+}
+
+@media screen and (max-width: 768px) {
+    .projets {
+        margin-top: 150px;
+    }
+}
+
+@media screen and (min-height: 1000px) {
+    .projets {
+        height: 800px;
+    }
+    .projets .caroussel-item {
+        margin-top: 6%;
+        height: 80%;
+    }
+}

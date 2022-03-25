@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="src/css/style.css">
+        <title>Corentin LEBLEU</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        
+        <nav class="navigation">
+            <ul class="navlist">
+                <li><a href="#propos">À Propos</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <section id="propos" class="propos">
+            <div class="background-image"></div>
+            <div class="container left">
+                <img src="./src/ressources/img/profile-picture.PNG" alt="profile-picture" class="profile-picture shadow">
+                <div class="title-container shadow">
+                    <div class="rectangle second-rectangle show-on-scroll"></div>
+                    <div class="rectangle first-rectangle show-on-scroll"></div>
+                    <div class="rectangle name">
+                        LEBLEU
+                        CORENTIN
+                    </div>
+                </div>
+                <img src="./src/ressources/img/fleche.png" alt="fleche" class="fleche show-on-scroll" height="100px">
+                <div class="etiquette-container shadow show-on-scroll">
+                    <p class="etiquette-content">Étudiant en informatique</p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="description-container">
+                    <div class="description-background shadow">
+                        <p class="description-content">
+                            Étudiant en 3ème année de Licence Informatique à l'Université de Lille et futur développeur. Intéressé par nombreux domaines de l'informatique comme le web, l'imagerie 2D/3D, ou encore le jeu-vidéo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projets" class="projets show-on-scroll">
+            <div class="fill"></div>
+            <div class="projets-background">
+                <div class="inner-top-border"></div>
+                <div class="inner-bottom-border"></div>
+
+                <div class="caroussel-container"></div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <div class="postit-list-container"></div>
+        </section>
+        
+        <section id="contact" class="contact">
+            <div class="fill-beige"></div>
+            <div class="contact-background">
+                <div class="inner-top-border"></div>
+                <h2 class="contact-title show-on-scroll">
+                    <img src="./src/ressources/img/fleche.png" alt="fleche">
+                    <span>Contactez moi ici !</span> 
+                </h2>
+                <div class="carte-postale shadow recto">
+                    <form class="formulaire" action="https://formspree.io/f/xdobajvv" method="POST">
+                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+                        <div class="inputs">
+                            <div class="carte-postale-photo"></div>
+                            <div class="input-wrapper nom">
+                                <input type="text" id="nom" name="nom" placeholder="Nom" required>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="email" id="email" name="email" placeholder="E-mail" required>    
+                            </div>
+                        </div>
+                        <input type="submit" id="submit" value="Envoyer">
+                    </form>
+                    <div class="derriere"></div>
+                </div>
+                <p class="ou-la show-on-scroll">
+                    <span>Ou là </span>
+                    <a href="https://www.linkedin.com/in/corentin-lebleu-197035197/" target="_blank" rel="noopener noreferrer"><img src="./src/ressources/img/icones/linkedin.png" alt="linkedin" class="icon"></a>
+                    <span> !</span>
+                </p>
+            </div>
+            <div class="fill-orange"></div>
+        </section>
+        
+        <footer>©2022 Corentin Lebleu</footer>
+
+        <script type="module" src="src/app.js"> </script>
+    </body>
+
+</html>

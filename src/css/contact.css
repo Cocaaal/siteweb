@@ -1,0 +1,245 @@
+@import "./global.css";
+
+.contact {
+    position: relative;
+    height: auto;
+}
+
+.contact-background {
+    padding-top: 150px;
+    padding-bottom: 5%;
+    position: relative;
+    background-color: var(--dark-orange);
+    transform: skewY(-5deg);
+    z-index: 10;
+}
+
+.fill-beige {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background-color: var(--beige);
+    top: 0;
+    z-index: -1;
+}
+.fill-orange {
+    background-color: var(--dark-orange);
+    width: 100%;
+    height: 170px;
+    margin-top: -10px;
+}
+.contact-background::before {
+    content: "";
+    position: absolute;
+    background-color: var(--dark-orange);
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    transform: skewY(5deg);
+}
+
+.inner-top-border {
+    height: 20px;
+}
+
+.carte-postale {
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transform: skewY(5deg);
+}
+
+.formulaire {
+    position: relative;
+    background-color: white;
+    width: 85%;
+    max-width: 1100px;
+    aspect-ratio: 16/9;
+    margin: auto;
+}
+.formulaire::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: min(1vw,5px);
+    background-color: var(--beige);
+    border-radius: 5px;
+    height: 90%;
+    margin-top: 2%;
+}
+
+.formulaire textarea{
+    position: relative;
+    width: 45%;
+    max-width: 45%;
+    height: 95%;
+    max-height: 95%;
+    margin-top: 2%;
+    margin-left: 2%;
+    float: left;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+}
+.formulaire .inputs {
+    width: 45%;
+    float: right;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulaire input {
+    width: 95%;
+    height: 100%;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+}
+.input-wrapper {
+    position: relative;
+    margin-bottom: 3%;
+    height: clamp(25px,10%,50px);
+}
+.input-wrapper::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: min(1vw,5px);
+    width: 10%;
+    background-color: var(--beige);
+    transition: width 0.3s ease-in;
+}
+.inputs .input-wrapper:focus-within::before {
+    width: 90%;
+    transition: width 0.3s ease-in;
+}
+
+.inputs input:focus, textarea {
+    outline: none;
+}
+
+.nom {
+    margin-top: auto;
+}
+
+.carte-postale-photo {
+    border: min(1vw,5px) var(--beige) solid;
+    width: 20%;
+    margin-right: 5%;
+    margin-left: auto;
+    margin-top: 5%;
+    aspect-ratio: 3/4;
+}
+.carte-postale-photo:hover {
+    background-image: url('../ressources/img/pt-inter.png');
+    background-size: cover;
+}
+
+.contact-title {
+    transform: skewY(5deg);
+    color: white;
+    font-family: "Prompt Extrabold";
+    font-size: min(9vw,3.5rem);
+    text-align: center;
+}
+.contact-title img {
+    margin-right: 1%;
+    height: min(9vw,3.5rem);
+    width: min(9vw,3.5rem);
+    filter: brightness(100);
+    transform: rotate(180deg);
+}
+.contact-title.showed img {
+    transform: rotate(-180deg);
+    transition: transform 0.5s ease-in-out 0.5s;
+}
+
+.contact-title span{
+    display: inline-block;
+    transform: scale(0);
+}
+.contact-title.showed span {
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out 0.5s;
+}
+
+.ou-la {
+    color: white;
+    font-family: "Prompt Regular";
+    font-size: min(7vw,2rem);
+    text-align: center;
+    transform: scale(0);
+    width: 35%;
+    margin: min(5%,40px) auto;
+}
+.ou-la.showed {
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out 1s;
+}
+.ou-la .icon {
+    margin: 0;
+    height: min(7vw,2rem);
+    width: min(7vw,2rem);
+}
+
+#submit {
+    position: absolute;
+    background-color: var(--light-orange);
+    color: white;
+    height: auto;
+    width: auto;
+    font-family: "Prompt Light";
+    font-size: max(1vw,0.75rem);
+    bottom: -0.8rem;
+    right: -0.8rem;
+    padding: 1px 1%;
+    border-radius: 5px;
+    z-index: 150;
+    transition: transform 0.1s ease-in-out;
+}
+#submit:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 0.1s ease-in-out;
+}
+
+.derriere {
+    position: absolute;
+    background-image: url('../ressources/img/ilovelille.png');
+    background-size: cover;
+    box-sizing: border-box;
+    border: 10px white solid;
+    width: 85%;
+    max-width: 1100px;
+    aspect-ratio: 16/9;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.recto .derriere {
+    transform: rotateY(-180deg);
+}
+.recto .formulaire {
+    z-index: 5;
+    transform: rotateY(0deg);
+}
+
+.verso .derriere {
+    transform: rotateY(0deg);
+}
+.verso .formulaire {
+    z-index: 5;
+    transform: rotateY(180deg);
+}
+
+.derriere, .formulaire {
+    backface-visibility: hidden;
+}
+
+.recto .formulaire, .recto .derriere, .verso .formulaire, .verso .derriere{
+    transition: 0.3s ease-in-out;
+}

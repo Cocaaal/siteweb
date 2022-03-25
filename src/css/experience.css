@@ -1,0 +1,126 @@
+@import "./global.css";
+
+.experience {
+    position: relative;
+    background-color: var(--beige);
+    padding-top: 100px;
+    padding-bottom: 50px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.postit-list-container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: auto;
+}
+.experience:before, .fill:before {
+    content: "";
+    position: absolute;
+    width: 1%;
+    max-width: 10px;
+    height: 100%;
+    right: 5%;
+    background-color: var(--light-orange);
+}
+.experience:before {
+    margin-top: -100px;
+}
+
+.postit-item {
+    position: relative;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+/*ronds*/
+.postit-item:before {
+    content: "";
+    position: absolute;
+    width: 5%;
+    aspect-ratio: 1/1;
+    top: 45%;
+    right: 3%;
+    background-color: var(--light-orange);
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.postit-item:hover::before {
+    border: min(10px,1vw) white solid;
+}
+
+.postit-container{
+    position: relative;
+    width: clamp(150px,30%,250px);
+    aspect-ratio: 1/1;
+    margin: 10%;
+    margin-left: 20%;
+    transition: transform 0.3s;
+    color: white;
+    line-height: 100%;
+    text-align: center;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 0;
+}
+.left-postit .postit-container{
+    transform: rotate(5deg) scale(2);
+    background-color: var(--dark-orange);
+}
+.right-postit .postit-container{
+    transform: rotate(-5deg) scale(2);
+    background-color: var(--light-orange);
+}
+
+.left-postit .postit-container.showed{
+    transform: rotate(5deg) scale(1);
+    opacity: 1;
+    transition: transform 0.5s ease-in-out 0.5s, opacity 0.5s ease-in-out 0.5s;
+}
+.right-postit .postit-container.showed{
+    transform: rotate(-5deg) scale(1);
+    opacity: 1;
+    transition: transform 0.5s ease-in-out 0.5s, opacity 0.5s ease-in-out 0.5s;
+}
+
+.left-postit:hover {
+    transform: rotate(-5deg);
+    transition: transform 0.3s ease-in-out;
+}
+.right-postit:hover {
+    transform: rotate(5deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.postit-name {
+    font-family: "Prompt Extrabold";
+}
+.postit-date, .postit-lieu {
+    font-family: "Prompt Regular";
+}
+
+.postit-container .icon {
+    width: clamp(50px,33%,150px);
+}
+
+@media screen and (min-width: 450px) {
+    .right-postit .postit-container{
+        margin-left: auto;
+        margin-right: 10%;
+    }
+    .left-postit .postit-container {
+        margin-left: 10%;
+    }
+    .experience:before, .fill:before {
+        right: 50%;
+    }
+    .postit-item:before {
+        right: 48%;
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "projets" : [
+        {
+            "title": "Visualisation de modèle 3D",
+            "description": "Logiciel permettant de lire des fichiers .ply et d'afficher le modèle en 3D. Réalisation de la partie affichage et des opérations sur le modèle comme la rotation, la translation etc.",
+            "informations": "Projet réalisé en DUT Informatique",
+            "icons": ["java","javafx"]
+        },{
+            "title": "Ma table au resto",
+            "description": "Application Android pour le projet \"Ma table au resto\", service permettant à des entreprises de réserver des tables de restaurant à l'année pour leurs employés.",
+            "informations": "Projet de fin d'année de DUT Informatique",
+            "icons": ["java","android-studio","android"]
+        },{
+            "title": "Site web portfolio",
+            "description": "Site web portfolio réalisé en Javascript et HTML/CSS. Design réalisé sur Photoshop.",
+            "informations":"Création du design et développement du site",
+            "icons": ["html","css","javascript","photoshop"]
+        },{
+            "title": "Stage Dév Fullstack",
+            "description": "Stage durant lequel j'ai pu travailler sur une application web permettant à des entreprises de gérer leurs stock de produits dangereux, créer des fiches produits, faire l'inventaire de leurs ateliers, etc...",
+            "informations": "Stage chez ADTi d'une durée de 2mois dans le cadre du DUT Informatique",
+            "icons": ["angular","typescript","csharp","ssms"]
+        }
+    ],
+    "experience" : [
+        {
+            "nom": "DUT Informatique",
+            "date": "2019 - 2021",
+            "type": "etudes",
+            "lieu": "IUT A Université de Lille"
+        },
+        {
+            "nom": "Stage Dév Fullstack",
+            "date": "juin-juillet-août 2021",
+            "type": "stage",
+            "lieu": "ADTi"
+        },
+        {
+            "nom": "Licence Informatique",
+            "date": "2021 - En cours",
+            "type": "etudes",
+            "lieu": "Université de Lille"
+        }
+    ]
+}

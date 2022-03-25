@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "MontserratAlternates Medium";
+    src: url(../ressources/fonts/MontserratAlternates-Medium.otf);
+}
+
+@font-face {
+    font-family: "Prompt Extrabold";
+    src: url(../ressources/fonts/Prompt-ExtraBold.ttf);
+}
+@font-face {
+    font-family: "Prompt Light";
+    src: url(../ressources/fonts/Prompt-Light.ttf);
+}
+@font-face {
+    font-family: "Prompt Regular";
+    src: url(../ressources/fonts/Prompt-Regular.ttf);
+}
+
+:root {
+    --navbar-background-color : #272727;
+    --text-color : white;
+    --dark-orange : #ff9029;
+    --light-orange : #ffb168;
+    --beige : #ffdfc3;
+}
+* {
+    margin: 0px;
+}
+html {
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+.shadow {
+    filter : drop-shadow(-0.8vh 0.8vw 0px rgba(0, 0, 0, 0.7));
+}
+
+.icon {
+    /* width: clamp(50px,33%,75px); */
+    height: clamp(30px,15vh,60px);
+    margin: 5%;
+}
